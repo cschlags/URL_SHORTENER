@@ -20,6 +20,10 @@ class UrlsController < ApplicationController
   def new
     @url = Url.new
   end
+
+  def popular
+    @urls = Url.all
+  end
   
   def create
     # long_url: site_params[:long_url]

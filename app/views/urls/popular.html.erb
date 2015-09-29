@@ -1,0 +1,13 @@
+<header class="intro">
+  <div id="top-links">
+    <h2>most popular sites</h2>
+      <ol>
+      <% @urls.each do |url| %>
+          <li>
+            <p class="link"><%= link_to url.long_url, "#{Url::BASE_URL}/#{url.short_url}", target: "_blank" %>
+          ♦ short url: <%= link_to "#{Url::BASE_URL}/#{url.short_url}", "#{request.base_url}/#{url.short_url}", target: "_blank" %> ♦ visits: <%= url.visits %> </p>
+          </li>
+      <% end %>
+    </ol>
+  </div>
+</header>
