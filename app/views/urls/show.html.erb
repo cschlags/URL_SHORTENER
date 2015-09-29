@@ -3,7 +3,7 @@
     <div class="container">
       <div class="col-xs-8 col-xs-offset-2">
         <h2>Cute Lil' Bugger</h2><br><br>
-        <% mini_url = "http://localhost:3000/#{@url.short_url}" %>
+        <% mini_url = "http://#{Url::BASE_URL}/#{@url.short_url}" %>
         <div id="short-url">
           <h3><%= link_to mini_url, mini_url, target: "blank" %></h3>
         </div>
