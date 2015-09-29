@@ -5,10 +5,9 @@
   <%= @url.long_url %>
 </p>
 
-<p>
-  <strong>Short url:</strong>
-  <%= @url.short_url %>
-</p>
+
+<p>your short url is:</p>
+<h3> <%= link_to "#{@url.short_url}" %></h3>
 
 <%= link_to 'Edit', edit_url_path(@url) %> |
 <%= link_to 'Back', urls_path %>
