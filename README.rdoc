@@ -1,25 +1,39 @@
-== URL Shortener README - ==== Christina Leuci
+== Short-and-Sweet README - === Christina Leuci
 
-Basic Requirements:
-DONE - Code must be on github
-DONE- The short code for the URL must be the shortest possible
-DONE- User should be able to put a URL into the home page and get back a unique short URL
-DONE- User should be redirected to the full URL when we enter the short URL
-- User should be able to view a top 100 board with the most frequently accessed URLs
-DONE- There should be a Gemfile for any application dependencies
-- There should be a test suite (RSpec, MiniTest, etc)
-- There must be a README that explains the following:
-  - How to setup and install the application
-  - Challenges, and how you overcame them
-  - Reasoning behind any design decisions
-  - How you came up with the short URL scheme
-  - Future improvements you would make with more time
+====To Setup Rails and Short-and-Sweet on your System
+Install rails:
 
-====How To Run
-Please run Rails Server to begin the server on your local system or if you'd rather please go to the Heroku *URL*
+``` ruby
+gem install rails -v 4.2.4
+```
+or any version of Rails you'd like to use. This application is running on the most current version of Rails.
 
-==== What I Need To Do
-Setup possibly needed gems - pry, rspec-rails, mysql2, guard-rspec require false, thin, pg
 
-DB should contain long-url, short-url, uniques?
+Git clone this repository and bundle install the gems by running:
 
+``` ruby
+bundle install
+```
+
+Set up the database:
+
+``` ruby
+rake db:migrate
+```
+When all the steps are complete run
+``` ruby
+rails server
+```
+and it will run a localhost Rails server on your Operating System.
+
+====Challenges
+The part of the application I found the most challenging was the start-from-nothing design. When I'm working with clients I can gauge their interest in a design option I present them but with Short-and-Sweet it was completely on me.
+I found that I wanted to mesh a few designs I had used previously with clients, ultimately they ended up clashing badly and I decided to experiment with a simpler design.
+
+I think most people would find it very odd to go to a URL-shortener and be bombarded by flashy text, images, and obscene cursive fonts. Since Short-and-Sweet is that type of simple URL-shortener I found that a simpler design worked best for the application.
+
+====The Short URL Scheme
+Luckily I found myself at the conclusion of using Base(36) from my time at Stack Exchange's Flatiron Mentorship. Max Horstmann, my mentor, put me through interview test after interview test; one of his questions was on what was the simplest and quickest way to shorten a URL. When I first tried to solve the question I got it wrong but it has stuck with me since.
+
+====Future Improvements
+I mean to continue tweaking this application, I'd like to create an API using the current logic and possibly taking in a screenshot of the website.
