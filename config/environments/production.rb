@@ -31,6 +31,7 @@ Rails.application.configure do
 
   # Generate digests for assets URLs.
   config.assets.digest = true
+  config.action_dispatch.x_sendfile_header = 'X-Accel-Redirect'
 
   # `config.assets.precompile` has moved to config/initializers/assets.rb
 
