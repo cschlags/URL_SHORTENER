@@ -35,4 +35,5 @@ Please run Rails Server to begin the server on your local system or if you'd rat
 ==== What I Need To Do
 Setup possibly needed gems - pry, rspec-rails, mysql2, guard-rspec require false, thin, pg
 
+DB should contain long-url, short-url, uniques?
 
