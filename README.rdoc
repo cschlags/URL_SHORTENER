@@ -1,5 +1,7 @@
 == Short-and-Sweet README - === Christina Leuci
 
+See my live app at http://short-and-sweet.herokuapp.com/
+
 ====To Setup Rails and Short-and-Sweet on your System
 Install rails:
 
@@ -33,7 +35,7 @@ I found that I wanted to mesh a few designs I had used previously with clients, 
 I think most people would find it very odd to go to a URL-shortener and be bombarded by flashy text, images, and obscene cursive fonts. Since Short-and-Sweet is that type of simple URL-shortener I found that a simpler design worked best for the application.
 
 ====The Short URL Scheme
-Luckily I found myself at the conclusion of using Base(36) from my time at Stack Exchange's Flatiron Mentorship. Max Horstmann, my mentor, put me through interview test after interview test; one of his questions was on what was the simplest and quickest way to shorten a URL. When I first tried to solve the question I got it wrong but it has stuck with me since.
+Luckily I found myself at the conclusion of using Base(36) from my time at Stack Exchange's Flatiron Mentorship. Max Horstmann, my mentor, put me through interview test after interview test; one of his questions was on what was the simplest and quickest way to shorten a URL. When I first tried to solve the question I did not know Base(36) was an answer but after researching it on my own time it has stuck with me since.
 
 ====Future Improvements
-I mean to continue tweaking this application, I'd like to create an API using the current logic and possibly taking in a screenshot of the website.
+I mean to continue tweaking this application. I'd like to create an API using the current logic for user's that would like to save and use these shortened urls on their phones and tablets. For added user benefit I'd like to explore using the 'imgkit' gem to capture a screenshot of the website.
