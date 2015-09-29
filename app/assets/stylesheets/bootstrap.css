@@ -6343,7 +6343,7 @@ button.close {
   }
 }
 body{
-  background-image: url('space_background.jpg');
+  background-image: url('space_background.jpg') !important;
   font-family: 'Roboto Mono', 500;
 }
 #nav_a{
@@ -6365,4 +6365,3 @@ footer{
 .footer_name a{
   color:black!important;
 }
-/*# sourceMappingURL=bootstrap.css.map */
