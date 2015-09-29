@@ -16,7 +16,7 @@ ActiveRecord::Schema.define(version: 20150927170755) do
   create_table "urls", force: true do |t|
     t.string   "long_url"
     t.string   "short_url"
-    t.integer  "http_status", default: 301
+    t.integer  "visits",     default: 0
     t.datetime "created_at"
     t.datetime "updated_at"
   end

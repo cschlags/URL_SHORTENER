@@ -1,6 +1,6 @@
 class Url < ActiveRecord::Base
   # each of these must be present
-  validates :long_url, :short_url, :http_status, :presence => true
+  validates :long_url, :presence => true
   # the long_url must be unique, don't want multiples
   validates :long_url, :uniqueness => true
   
