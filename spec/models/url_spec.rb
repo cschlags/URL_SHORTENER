@@ -7,7 +7,6 @@ describe 'Urls' do
       @long_url = 'test.com'
       @url = Url.new
       @url.long_url = @long_url
-      binding.pry
       @url.setup_short_url(@url)
     end
 
