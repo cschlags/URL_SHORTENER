@@ -1,6 +1,7 @@
 class UrlsController < ApplicationController
   def index
     @url = Url.new
+    @urls = Url.limit(100).order(visits: :desc)
   end
 
   def show
