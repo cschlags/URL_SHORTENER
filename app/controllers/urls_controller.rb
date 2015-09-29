@@ -1,14 +1,17 @@
 class UrlsController < ApplicationController
-  def index
-    redirect_to root_path
+  def get_url
+    if @url = Url.find_by(short_url: params[:unknown])
+      visits(@url)
+    else
+      redirect_to root_path
+    end
   end
 
   def show
     @url = Url.find(params[:id])
   end
 
-  def visit
-    @url = Url.find_by(short_url: params[:id])
+  def visits(url)
     @url.visits += 1
     @url.save
     redirect_to @url.long_url
