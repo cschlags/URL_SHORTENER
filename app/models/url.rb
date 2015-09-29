@@ -1,7 +1,8 @@
 require 'pry'
 class Url < ActiveRecord::Base
   # each of these must be present
-  validates :long_url, :presence => true, :uniqueness => true
+  validates :long_url, :presence => true
+  before_create :validate_original
   after_create :generate_short
   
   # if user does not have http or in future when calling http

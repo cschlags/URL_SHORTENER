@@ -1,5 +1,18 @@
-<h1>New url</h1>
-
-<%= render 'form' %>
-
-<%= link_to 'Back', urls_path %>
+<header class="intro">
+  <div class="intro-body">
+    <div class="container">
+      <div class="col-md-8 col-md-offset-2">
+        <%= form_for @url do |f| %>
+          <%= f.label :long_url, "What URL can I chomp for you?" , class: "intro-text"%><br><br>
+          <% if @url.errors.any? %>
+            <% @url.errors.each do |msg| %>
+              
+            <% end %>
+          <% end %>
+          <%= f.text_field :long_url, required: true, placeholder: 'Omnomnom...' %><br><br>
+          <%= f.submit "Mini Me!", class: "btn btn-primary" %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</header>

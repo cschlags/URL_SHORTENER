@@ -1,11 +1,13 @@
-<p id="notice"><%= notice %></p>
-
-<p>Long url:</p>
-<h3> <%= link_to "#{@url.short_url}" %></h3>
-
-
-<p>your short url is:</p>
-<h3> <%= link_to "#{@url.short_url}" %></h3>
-
-<%= link_to 'Edit', edit_url_path(@url) %> |
-<%= link_to 'Back', urls_path %>
+<header class="intro">
+  <div class="intro-body">
+    <div class="container">
+      <div class="col-xs-8 col-xs-offset-2">
+        <h1>Little URL tada!</h1><br><br>
+        <% tiny_url = "#{@url.short_url}" %>
+        <div id="short-url">
+          <%= link_to tiny_url, tiny_url, target: "blank" %>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
