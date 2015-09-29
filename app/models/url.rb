@@ -1,6 +1,6 @@
 
 class Url < ActiveRecord::Base
-  BASE_URL = "localhost:3000"
+  BASE_URL = "http://short-and-sweet.herokuapp.com"
   # each of these must be present
   validates :long_url, :presence => true
   before_create :validate_long
