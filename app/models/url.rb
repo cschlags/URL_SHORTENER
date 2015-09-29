@@ -3,8 +3,9 @@ class Url < ActiveRecord::Base
   validates :long_url, :presence => true
   # the long_url must be unique, don't want multiples
   validates :long_url, :uniqueness => true
+  after_create :generate_slug
   
-  # addition security that it is a url
+  # if user does not have http or in future when calling http
   def validate_original
     if !long_url.match(/^http/)
       self.long_url = "http://#{long_url}"

@@ -1,9 +1,7 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Long url:</strong>
-  <%= @url.long_url %>
-</p>
+<p>Long url:</p>
+<h3> <%= link_to "#{@url.short_url}" %></h3>
 
 
 <p>your short url is:</p>
