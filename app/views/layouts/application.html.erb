@@ -9,16 +9,12 @@
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <meta name="author" content="Christina Leuci">
+      <link href='https://fonts.googleapis.com/css?family=Roboto+Mono:400,100italic,700italic,500italic' rel='stylesheet' type='text/css'>
+      
   </head>
   <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
     <%= render 'layouts/nav' %>
-    <div class="container-fluid">
-      <div class="row">
-        <h1 class="col-lg-12 text-center">Phenomenal cosmic powers! </h1>
-        <h3 class="col-lg-12 text-center">itty bitty living space.</h3>
-      </div>
       <%= yield %>
-    </div>
-  <%= render 'layouts/footer' %>
+    <%= render 'layouts/footer' %>
   </body>
 </html>

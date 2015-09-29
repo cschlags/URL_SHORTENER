@@ -1,11 +1,11 @@
-<header class="intro">
+<header class="intro" id="left">
   <div class="intro-body">
     <div class="container">
       <div class="col-xs-8 col-xs-offset-2">
-        <h1>Cute Lil' Bugger</h1><br><br>
+        <h2>Cute Lil' Bugger</h2><br><br>
         <% mini_url = "http://localhost:3000/#{@url.short_url}" %>
         <div id="short-url">
-          <%= link_to mini_url, mini_url, target: "blank" %>
+          <h3><%= link_to mini_url, mini_url, target: "blank" %></h3>
         </div>
       </div>
     </div>

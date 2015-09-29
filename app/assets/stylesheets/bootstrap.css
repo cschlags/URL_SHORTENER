@@ -1230,11 +1230,16 @@ ol ol {
   margin-bottom: 0;
 }
 #top-links{
-  width:61%;
+  width:68%;
   text-align: center;
+  background-color: rgba(0,0,0,.5);
+  color:white;
 }
 .intro{
-  margin-left: 28%;
+  margin-left: 23%;
+}
+#left{
+  margin-left: 21%;
 }
 .list-unstyled {
   padding-left: 0;
@@ -6336,5 +6341,28 @@ button.close {
   .hidden-print {
     display: none !important;
   }
+}
+body{
+  background-image: url('space_background.jpg');
+  font-family: 'Roboto Mono', ;
+}
+#nav_a{
+  color:black;
+  text-decoration: none;
+  font-size:400;
+}
+.intro{
+  margin-top: 20%;
+}
+footer{
+    position:fixed;
+    height:40px;
+    bottom:0px;
+    left:0px;
+    right:0px;
+    margin-bottom:0px;
+}
+.footer_name a{
+  color:black!important;
 }
 /*# sourceMappingURL=bootstrap.css.map */
