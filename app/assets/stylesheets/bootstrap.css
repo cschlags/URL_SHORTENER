@@ -6343,7 +6343,7 @@ button.close {
   }
 }
 body{
-  background-image: url(image-path('space_background.jpg'));
+  background-image: url('public/assets/space_background-640f29eb1ed4ecf34d4d1a8190adf27b.jpg');
   font-family: 'Roboto Mono', 500;
 }
 #nav_a{
