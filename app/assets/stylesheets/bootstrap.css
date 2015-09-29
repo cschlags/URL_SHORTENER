@@ -6344,7 +6344,7 @@ button.close {
 }
 body{
   background-image: url('space_background.jpg');
-  font-family: 'Roboto Mono', ;
+  font-family: 'Roboto Mono', 500;
 }
 #nav_a{
   color:black;
