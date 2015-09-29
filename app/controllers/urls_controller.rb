@@ -1,7 +1,6 @@
 class UrlsController < ApplicationController
   def index
-    @url = Url.new
-    @urls = Url.limit(100).order(visits: :desc)
+    redirect_to root_path
   end
 
   def show
@@ -20,19 +19,23 @@ class UrlsController < ApplicationController
   end
   
   def create
-  end
+    # long_url: site_params[:long_url]
+    @url = Url.new(url_params)
 
-  def destroy
-    @url = Url.find(params[:id])
-    @url.destroy
     respond_to do |format|
-      format.html { redirect_to sites_url, notice: 'Site has been annihilated.' }
+      if @url.save
+        format.html { redirect_to url_path(@url), notice: 'Url has been created! Tahdah!' }
+        format.json
+      else
+        format.html { render action: 'new' }
+        format.json { render :json => { :error => @url.errors.full_messages }, :status => 422 }
+      end
     end
   end
 
   private
   # Never trust parameters from the scary internet, only allow the white list through.
-  def site_params
-    params.require(:site).permit(:long_url, :short_url, :visits)
+  def url_params
+    params.require(:url).permit(:long_url)
   end
 end
